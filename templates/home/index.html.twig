@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<div class="container">
+    <h1>Les gites du point sublime</h1>
+    <p>Au coeur de la  Lozere dans un petit village caussenard</p>
+    <p>Nos gites situés a la croisée des activité de la regions, que se soit pour le sport ,les balades en natures ou meme pour des activités culturelles  </p>
+    <p>
+        Situé à 870 m d'altitude, le site classé du "Point Sublime" est un des endroits dans les gorges du Tarn les plus fréquentés. Situé sur le Causse de Sauveterre, le Point-Sublime est un belvédère qui offre aux visiteurs le spectacle de ces merveilleuses falaises ocres plongeant dans les eaux émeraude du Tarn.
+        Au pied, soit plus de quatre cents mètres plus bas, le Tarn fait un virage à angle droit et ce 'caprice' permet au visiteur de prendre les gorges en enfilade, et vers l'est, et vers le sud. En face, les corniches abruptes du causse Méjean donnent la touche finale au caractère des lieux et complètent ce magnifique tableau digne des plus grands artistes.
+    </p>
+    <p>
+        Le Parc naturel régional des Grands Causses est un Parc naturel régional créé en 1995 qui s’étend sur 93 communes au nord-est de la région Occitanie, au nord-est et sud du département de l’Aveyron. D’une superficie de 327 935 ha, il est le troisième parc le plus grand de France après celui des Volcans d'Auvergne et celui de Corse. Il regroupe 67 900 habitants (INSEE, janvier 2011).
+
+        Le paysage des causses, situés pour partie dans le périmètre du Parc, comme leur économie, a été façonné par l'activité pastorale. En 2011, 22 communes du Parc, faisant partie du site Les Causses et les Cévennes, ont été distinguées par l'UNESCO reconnaissant leur valeur universelle exceptionnelle comme « paysages culturels de l'agro-pastoralisme méditerranéen » permettant leur inscription sur la liste du Patrimoine mondial de l’Humanité.
+    </p>
+
+</div>
+
+{% include "includes/maps.html.twig" %}
+
+{% endblock %}

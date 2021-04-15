@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ActiviteController!{% endblock %}
+
+{% block body %}
+<style>
+
+</style>
+
+    <nav class="navbar   navbar-expand-sm bg-dark" id="mainNav">
+        <ul class="nav navbar-nav text-uppercase ">
+            <li class="nav-item" role="presentation"><a class="nav-link " href="#sport">Activitées sportives</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#promenades">Balades promenades</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#gastronomie">gastronomie</a></li>
+        </ul>
+    </nav>
+    <div class="jumbotron">
+        
+        <div class="container">
+            <h1 id="sport">sport en lozere</h1>
+            {% for sport in activiteSport %}
+            <article class="activite">
+                <div class="content">
+                    <h2>{{ sport.titre }}</h2>
+                    <p>{{ sport.description }}</p>
+                </div>
+                <div class="image">
+                    <img class="w-25 p-3" src="{{ asset('images/activitees/') }}{{ sport.image }}" alt="{{ sport.titre }}">
+                </div>
+            </article>
+                {% if sport.localisation %}
+            <div class="map">
+                <iframe allowfullscreen frameborder="0"
+                        src="{{ sport.localisation|raw }}"
+                        width="100%" height="450"></iframe>
+            </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="container">
+            <h1 id="promenades">Balade en lozere</h1>
+            {% for balade in activiteBalades %}
+                <article class="activite">
+                    <div class="content">
+                        <h2>{{ balade.titre }}</h2>
+                        <p>{{ balade.description }}</p>
+                    </div>
+                    <div class="image">
+                        <img class="w-25 p-3" src="{{ asset('images/activitees/') }}{{ balade.image }}" alt="{{ balade.titre }}">
+                    </div>
+                </article>
+                {% if balade.localisation %}
+                    <div class="map">
+                        <iframe allowfullscreen frameborder="0"
+                                src="{{ balade.localisation|raw }}"
+                                width="100%" height="450"></iframe>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="container">
+            <h1 id="gastronomie">Manger en lozere</h1>
+            {% for gastronomie in activiteGastronomie %}
+                <article class="activite">
+                    <div class="content">
+                        <h2>{{ gastronomie.titre }}</h2>
+                        <p>{{ gastronomie.description }}</p>
+                    </div>
+                    <div class="image">
+                        <img class="w-25 p-3" src="{{ asset('images/activitees/') }}{{ gastronomie.image }}" alt="{{ gastronomie.titre }}">
+                    </div>
+                </article>
+                {% if gastronomie.localisation %}
+                    <div class="map">
+                        <iframe allowfullscreen frameborder="0"
+                                src="{{ gastronomie.localisation|raw }}"
+                                width="100%" height="450"></iframe>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+
+    </div>
+
+{% endblock %}

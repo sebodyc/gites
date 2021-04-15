@@ -1,0 +1,74 @@
+<style>
+
+
+
+    .features-boxed .intro {
+
+        font-size: 16px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #addresseLogo{
+        color: whitesmoke;
+
+    }
+
+    .img-fluid{
+        width: 23rem;
+        margin: auto;
+    }
+
+
+    header {
+        position: relative;
+        background-image: url("images/header.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+        min-height: 25rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    header video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    header .container {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    .justify-content-center {
+        text-align: center;
+    }
+
+
+</style>
+
+<header>
+    <div class="container-fluid">
+    </div>
+    <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+            <div class="container-fluid ">
+               <a href="{{path('home') }}"><img class="img-fluid" src="{{ asset('images/logo2.gif') }}"  alt=""></a>
+            </div>
+    </div>
+    </div>
+</header>

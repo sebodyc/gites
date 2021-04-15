@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+<style>
+    .menu-area img {
+        padding: 1rem;
+        border-radius: 0.4rem;
+    }
+    h2 {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+    .mailto {
+        color: gray;
+        font-size: 2rem;
+    }
+    .fas{
+        color: blue;
+    }
+</style>
+
+    <div class="contact">
+        <div class="container">
+            <h2>Par téléphonne
+            </h2>
+            <p>04.88.14.34.00</p>
+            <h2>Par Email
+            </h2>
+            <p>lenvie13100@gmail.com</p>
+            <a class="mailto" href="mailto:lenvie13100@gmail.com?subject=Premier contact&body=Bonjour">
+                <i class="fas fa-paper-plane"></i>
+            </a>
+
+        </div>
+    </div>
+{% endblock %}
