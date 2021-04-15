@@ -11,6 +11,9 @@ import './styles/app.scss';
 // start the Stimulus application
 import './bootstrap';
 
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+
 // app.js
 
 const $ = require('jquery');
@@ -26,6 +29,10 @@ require('@fortawesome/fontawesome-free/js/all.js');
 
 $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
+});
+
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel();
 });
 
 

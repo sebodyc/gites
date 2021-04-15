@@ -6,6 +6,11 @@
 <style>
 
 </style>
+    <div class="owl-carousel owl-theme">
+        {% for sport in activiteSport %}
+        <div>  <img class="w-25 p-3" src="{{ asset('images/activitees/') }}{{ sport.image }}" alt="{{ sport.titre }}"> </div>
+    {% endfor %}
+    </div>
 
     <nav class="navbar   navbar-expand-sm bg-dark" id="mainNav">
         <ul class="nav navbar-nav text-uppercase ">
@@ -84,5 +89,7 @@
 
 
     </div>
+
+
 
 {% endblock %}
