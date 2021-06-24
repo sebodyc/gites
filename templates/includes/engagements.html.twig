@@ -1,0 +1,94 @@
+<style>
+    .container{padding: 2rem;}
+    /*
+    flip card
+    */
+    .card-flip > div {
+        backface-visibility: hidden;
+        transition: transform 300ms;
+        transition-timing-function: linear;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: flex;
+    }
+
+    .card-front {
+        transform: rotateY(0deg);
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 0;
+    }
+
+    .card-flip:hover .card-front {
+        transform: rotateY(-180deg);
+    }
+
+    .card-flip:hover .card-back {
+        transform: rotateY(0deg);
+    }
+</style>
+
+<h1>Mes engagements</h1>
+<div class="container mb-4 ">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card card-flip h-100">
+                <div class="card-front text-white bg-primary">
+                    <div class="card-body">
+                        <i class="fa fa-money-bill-wave fa-5x float-right"></i>
+                        <h3 class="card-title">Prix</h3>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+                <div class="card-back bg-dark">
+                    <div class="card-body text-white">
+                        <h3 class="card-title">Amfc</h3>
+                        <p class="card-text">la qualité au meilleur prix</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card card-flip h-100">
+                <div class="card-front text-white bg-primary">
+                    <div class="card-body">
+                        <i class="fa fa-solid fa-award fa-5x float-right"></i>
+                        <h3 class="card-title">Professionalisme</h3>
+
+                    </div>
+                </div>
+                <div class="card-back bg-dark text-white">
+                    <div class="card-body">
+                        <h3 class="card-title">AMFC</h3>
+                        <p class="card-text">Vous propose un travail de qualité dans les regles de l'art </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card card-flip h-100">
+                <div class="card-front text-white bg-primary">
+                    <div class="card-body">
+                        <i class="fa fa-handshake fa-5x float-right"></i>
+                        <h3 class="card-title">Satisfaction</h3>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+                <div class="card-back bg-dark">
+                    <div class="card-body text-white">
+                        <h3 class="card-title">AMFC</h3>
+                        <p class="card-text">Notre priorité , votre satifaction </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

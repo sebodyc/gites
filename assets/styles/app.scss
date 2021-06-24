@@ -1,5 +1,6 @@
 // customize some Bootstrap variables
-$primary: darken(#13181c, 20%);
+$greyseb: #006481   !default;
+$primary: $greyseb !default;
 
 
 
@@ -7,27 +8,35 @@ $primary: darken(#13181c, 20%);
 @import "~bootstrap/scss/bootstrap";
 
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap');
 
-$im-fell: 'IM Fell DW Pica SC', serif;
-$bellota: 'Bellota Text', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+$fjalla: 'Fjalla One', sans-serif;
+$heebo: 'Heebo', sans-serif;
 
 
 // Styles
+body{
+
+
+
+  //background-image: linear-gradient(to right bottom, #002db3 45%, #ffffff 50%);
+}
 p {
-  font-family: $bellota;
+  font-family: $heebo;
   font-weight: bold;
   font-size: 1.2rem;
 
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: $im-fell;
+  font-family: $fjalla;
 }
 
  a {
-  font-family: $im-fell;
+  font-family: $fjalla;
 }
 
 

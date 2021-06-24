@@ -5,14 +5,14 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
+import jquery from 'jquery';
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
 
 // start the Stimulus application
 import './bootstrap';
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel';
+
 
 // app.js
 
@@ -31,8 +31,10 @@ $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
 });
 
-$(document).ready(function(){
-    $('.owl-carousel').owlCarousel();
-});
+
+$('.carousel').carousel({
+    interval: 2000
+})
+
 
 

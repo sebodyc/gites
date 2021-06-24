@@ -1,20 +1,23 @@
 <style>
+.fa-bars{
+    color: #DDDDDD;
+}
+
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-none fixed-top">
-
+<nav class="navbar navbar-expand-lg  bg-primary fixed-top ">
+    <a class="navbar-brand" href="/">AMFC chaudronerie</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="nav navbar-nav ml-auto text-uppercase">
-            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="">Nos gites</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="{{ path('prestations') }}">Nos préstations</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="{{ path('about') }}">Qui sommes-nous?</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="{{ path('activite') }}">Activité</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="{{ path('contact') }}">Contact</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="{{ path('activite_create') }}">Contact</a></li>
 
+        <ul class="nav navbar-nav ml-auto text-uppercase">
+            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="{{ path('industrie') }}">Industrie</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="{{ path('about') }}">Particuliers</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="{{ path('about') }}">Qui sommes nous</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link " id="over-nav-link" href="{{ path('contact') }}">Contact</a></li>
+            <li class="nav-item" role="presentation"><a class="mailto nav-link"  href="mailto:lenvie13100@gmail.com?subject=Premier contact&body=Bonjour" role="button" aria-disabled="true">devis</a></li>
         </ul>
     </div>
 </nav>

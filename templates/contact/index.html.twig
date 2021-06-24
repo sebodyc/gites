@@ -4,6 +4,24 @@
 
 {% block body %}
 <style>
+    .contactBox{
+        text-align: center;
+        background-color: RGBA(0,100,129,0.46);
+    }
+    .contact{
+
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        /* The image used */
+        background-image: url("images/backgroud/a.png");
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
     .menu-area img {
         padding: 1rem;
         border-radius: 0.4rem;
@@ -12,23 +30,22 @@
         padding-bottom: 2rem;
         padding-top: 2rem;
     }
-    .mailto {
-        color: gray;
+
+    .contact a{
         font-size: 2rem;
     }
-    .fas{
-        color: blue;
-    }
+
+
 </style>
 
     <div class="contact">
-        <div class="container">
+        <div class="contactBox">
             <h2>Par téléphonne
             </h2>
-            <p>04.88.14.34.00</p>
+            <a href="tel:+33659621678">06.59.62.16.78</a>
             <h2>Par Email
             </h2>
-            <p>lenvie13100@gmail.com</p>
+            <p>amfc@ruc.com</p>
             <a class="mailto" href="mailto:lenvie13100@gmail.com?subject=Premier contact&body=Bonjour">
                 <i class="fas fa-paper-plane"></i>
             </a>
