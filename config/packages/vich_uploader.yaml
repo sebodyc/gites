@@ -9,3 +9,7 @@ vich_uploader:
         activitees_images:
             upload_destination: '%kernel.project_dir%/public/images/activitees'
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+        photos_images:
+            upload_destination: '%kernel.project_dir%/public/images/photos'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer

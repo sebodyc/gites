@@ -25,7 +25,7 @@
 </style>
 
 <div class="container " >
-    <h1>AMFC chaudronnier en region paca</h1>
+    <h1>AMFC ferronerie chaudronnerie  region paca</h1>
     <div class="row">
 
     <div class="col-lg-6 text-justify">
@@ -48,15 +48,19 @@
     
     <div class="container">
         <div class="text-center">
-        <h2>intervention</h2>
-        <p>je me déplace dans toute la region paca en particulier le vaucluse les alpes les ouches du rhone et le var </p>
+        <h2><i class="fas fa-truck"></i>     intervention <i class="fas fa-truck">   </i></h2>
+        <p>je me déplace dans toute la France </p>
         </div>
     </div>
-    
+    {% if chcookieconsent_isCookieConsentSavedByUser() == true %}
+        {{ render_esi(path('ch_cookie_consent.show', { 'locale' : 'fr' })) }}
+        {{ render_esi(path('ch_cookie_consent.show_if_cookie_consent_not_set', { 'locale' : app.request.locale })) }}
+    {% endif %}
+
     <div class="container">
         <div class="text-center ">
             <h3>Devis gratuit</h3>
-            <a  class="mailto btn btn-dark btn-lg btn-block"  href="mailto:lenvie13100@gmail.com?subject=Premier contact&body=Bonjour" role="button" aria-disabled="true">
+            <a  class="mailto btn btn-dark btn-lg btn-block"  href="mailto:guerin.f@icloud.com?subject=Demande de devis&body=Bonjour" role="button" aria-disabled="true">
                 <i class="fas fa-envelope"></i>
                 <p>Demande de devis</p>
             </a>

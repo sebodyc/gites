@@ -1,0 +1,191 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ParticulierController!{% endblock %}
+
+
+{% block body %}
+<style>
+
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 1em;
+        visiblity: hidden;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: 9999;
+        /* Les couleurs */
+        background: rgb(255,0,0);
+        background: transparent\9;
+        background: rgba(0, 0, 0, 0.8);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4cFF0000,endColorstr=#4cFF0000);
+        zoom: 1;
+        /* effet de fermeture */
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -ms-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+        -webkit-transform: rotate(0deg) scale(0);
+        -moz-transform: rotate(0deg) scale(0);
+        -ms-transform: rotate(0deg) scale(0);
+        -o-transform: rotate(0deg) scale(0);
+        transform: rotate(0deg) scale(0);
+        -webkit-transform-origin: right top;
+        -moz-transform-origin: right top;
+        -o-transform-origin: right top;
+        transform-origin: right top;
+    }
+    .lightbox:target {
+        opacity: 1;
+        visiblity: visible;
+        /* effet d'ouverture */
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -ms-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+        -webkit-transform: rotate(0deg) scale(1);
+        -moz-transform: rotate(0deg) scale(1);
+        -ms-transform: rotate(0deg) scale(1);
+        -o-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+        -webkit-transform-origin: left bottom;
+        -moz-transform-origin: left bottom;
+        -o-transform-origin: left bottom;
+        transform-origin: left bottom;
+    }
+    /* Image de taille maximale */
+    .maximage {
+        max-height:93%;
+    }
+
+</style>
+
+
+<h1>Amfc pour les particuliers</h1>
+    <p>Fier de ses ennées d'experiences Amfc ccompagne les particulier dans leur traveaux leur envies</p>
+    <p>Que se soit pour une pergola , un portail un escalier ou meme des gardes corps amfc met a votre disposition et son savoir faire </p>
+    <p>Pour que votre projet soit bla bla bla</p>
+
+    <h1>Mes réalisations</h1>
+
+    <h2>Les portails</h2>
+
+        <div class="container">
+            <div class="row ">
+    {% for portail in portails %}
+                <div class="col-sm-2 col-md-4 col-lg-3  ">
+                    <a href="#{{ asset('images/photos/') }}{{ portail.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ portail.image }}" class="img-thumbnail"  alt="{{ portail.name }}">
+                    </a>
+                    <a href="#_" class="lightbox" id="{{ asset('images/photos/') }}{{ portail.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ portail.image }}" class="maximage" >
+                    </a>
+                </div>
+    {% endfor %}
+            </div>
+        </div>
+
+
+    <h2>Les pergolas</h2>
+
+        <div class="container">
+            <div class="row">
+    {% for pergola in pergolas %}
+                <div class="col-sm-6 col-md-4 col-lg-3 py-4 ">
+                
+                <a href="#{{ asset('images/photos/') }}{{ pergola.image }}">
+                    <img src="{{ asset('images/photos/') }}{{ pergola.image }}" class="thumbnail img-fluid"  alt="{{ pergola.name }}">
+                </a>
+                <a href="#_" class="lightbox" id="{{ asset('images/photos/') }}{{ pergola.image }}">
+                    <img src="{{ asset('images/photos/') }}{{ pergola.image }}" class="maximage" >
+                </a>
+                    </div>
+    {% endfor %}
+                </div>
+            </div>
+
+
+
+
+    <h2>Les escaliers</h2>
+
+
+        <div class="container">
+            <div class="row">
+    {% for escalier in escaliers %}
+                <div class="col-md-6 col-lg-4">
+                    <a href="#{{ asset('images/photos/') }}{{ escalier.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ escalier.image }}" class="thumbnail img-fluid"  alt="{{ escalier.name }}">
+                    </a>
+                    <a href="#_" class="lightbox" id="{{ asset('images/photos/') }}{{ escalier.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ escalier.image }}" class="maximage" >
+                    </a>
+                </div>
+    {% endfor %}
+            </div>
+        </div>
+
+
+    <h2>Les grilles</h2>
+
+        <div class="container">
+            <div class="row">
+    {% for grille in grilles %}
+                <div class="col-md-6 col-lg-4">
+                    <a href="#{{ asset('images/photos/') }}{{ grille.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ grille.image }}" class="thumbnail img-fluid"  alt="{{ grille.name }}">
+                    </a>
+                    <a href="#_" class="lightbox" id="{{ asset('images/photos/') }}{{ grille.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ grille.image }}" class="maximage" >
+                    </a>
+                </div>
+    {% endfor %}
+            </div>
+        </div>
+
+
+    <h2>Les verriere</h2>
+
+        <div class="container">
+            <div class="row">
+    {% for veriere in verrieres %}
+                <div class="col-md-6 col-lg-4">
+                    <a href="#{{ asset('images/photos/') }}{{ veriere.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ veriere.image }}" class="thumbnail img-fluid"  alt="{{ veriere.name }}">
+                    </a>
+                    <a href="#_" class="lightbox" id="{{ asset('images/photos/') }}{{ veriere.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ veriere.image }}" class="maximage" >
+                    </a>
+                </div>
+    {% endfor %}
+            </div>
+        </div>
+
+
+    <h2>Les gardes-corps</h2>
+
+        <div class="container">
+            <div class="row">
+    {% for garde in gardeCorps %}
+                <div class="col-md-6 col-lg-4">
+                    <a href="#{{ asset('images/photos/') }}{{ garde.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ garde.image }}" class="thumbnail img-fluid"  alt="{{ garde.name }}">
+                    </a>
+                    <a href="#_" class="lightbox" id="{{ asset('images/photos/') }}{{ garde.image }}">
+                        <img src="{{ asset('images/photos/') }}{{ garde.image }}" class="maximage" >
+                    </a>
+                </div>
+    {% endfor %}
+            </div>
+        </div>
+
+
+
+
+{% endblock %}
+

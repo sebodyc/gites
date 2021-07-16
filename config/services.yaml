@@ -6,6 +6,7 @@
 parameters:
     app.path.product_images: /uploads/images/products
     app.path.activitees_images: /uploads/images/activitees
+    app.path.photos_images: /uploads/images/photos
 
 
 services:

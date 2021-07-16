@@ -14,6 +14,8 @@ import './bootstrap';
 
 
 
+
+
 // app.js
 
 const $ = require('jquery');
@@ -32,9 +34,16 @@ $(document).ready(function() {
 });
 
 
+
+
 $('.carousel').carousel({
     interval: 2000
-})
+});
+
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
 
 
 
