@@ -1,27 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Contact{% endblock %}
 
 {% block body %}
 <style>
     .contactBox{
         text-align: center;
-        background-color: RGBA(0,100,129,0.46);
-    }
-    .contact{
-
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-        /* The image used */
-        background-image: url("images/backgroud/a.png");
-
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
 
     }
+
     .menu-area img {
         padding: 1rem;
         border-radius: 0.4rem;
@@ -31,14 +18,19 @@
         padding-top: 2rem;
     }
 
-    .contact a{
+    .paralaxe a{
         font-size: 2rem;
+         color: black;
+    }
+
+    .paralaxe a:hover{
+        color: #006481;
     }
 
 
 </style>
 
-    <div class="contact">
+    <div class="paralaxe mb-5">
         <div class="contactBox">
             <h2>Par téléphonne
             </h2>

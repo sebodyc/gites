@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}AMFC ferronier chaudronnier {% endblock %}
 
 {% block body %}
 <style>
@@ -9,17 +9,7 @@
         line-height: 2.5rem;
     }
 
-    .paralaxe {
-        margin-top: 3rem;
-        /* The image used */
-        background-image: url("images/backgroud/a.png");
 
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
@@ -52,10 +42,11 @@
         <p>je me déplace dans toute la France </p>
         </div>
     </div>
-    {% if chcookieconsent_isCookieConsentSavedByUser() == true %}
-        {{ render_esi(path('ch_cookie_consent.show', { 'locale' : 'fr' })) }}
-        {{ render_esi(path('ch_cookie_consent.show_if_cookie_consent_not_set', { 'locale' : app.request.locale })) }}
-    {% endif %}
+
+    <div class="paralaxe">
+        {% include 'includes/maps.html.twig' %}
+    </div>
+
 
     <div class="container">
         <div class="text-center ">

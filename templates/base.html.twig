@@ -5,6 +5,18 @@
 
         <title>{% block title %}Welcome!{% endblock %}</title>
 
+        <style>     .paralaxe {
+                margin-top: 3rem;
+                /* The image used */
+                background-image: url("images/backgroud/a.png");
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }</style>
+
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
