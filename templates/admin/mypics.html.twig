@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+
+
+
+
+
+{#            <div class="container">#}
+{#                <div class="col">#}
+{#                        <img src="{{ asset('images/photos/') }}{{ photo.image }}" class="img-fluid rounded">#}
+{#                         <a style="color: #223462" type="button" href="{{ path('effacer',{'id':photo.id}) }}">effacer</a>#}
+{#                </div>#}
+{#            </div>#}
+
+
+<div class="container ">
+
+
+    <div class="row">
+        {% for photo in photos %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0"> <img src="{{ asset('images/photos/') }}{{ photo.image }}" class="img-fluid rounded">
+                <div class="card-body">
+                    <p>type :{{ photo.type }}</p>
+                    <p>Categorie : {{ photo.category }}</p>
+                    <a class="btn btn-danger"   href="{{ path('effacer',{'id':photo.id}) }}"> <i class="fas fa-trash-alt"></i> effacer</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}
+

@@ -42,11 +42,13 @@ class Photos
     }
 
     /**
-     * @param string $image
+     * @param  $image
+     * @return Photos
      */
-    public function setImage(string $image): void
+    public function setImage(?string $image):self
     {
         $this->image = $image;
+        return $this;
     }
 
     /**

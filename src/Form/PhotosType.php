@@ -15,8 +15,8 @@ class PhotosType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('image')
-            ->add('updatedAt')
+//            ->add('image')
+
             ->add('name',TextType::class,[
                 'label' => "Nom de la photos",
                 'help' => "soignez la mise en forme"
